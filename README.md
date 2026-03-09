@@ -31,3 +31,4 @@ npm start
 ---
 
 ###   ﾟ Preview 
+![Preview site](<./preview.png>)
