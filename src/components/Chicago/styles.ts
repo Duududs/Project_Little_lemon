@@ -68,7 +68,6 @@ export const Image = styled.div<HTMLAttributes<HTMLDivElement>>`
     left: -12rem;
     top: 12rem;
     z-index: 2;
-    /* border: 5px solid red; */
     position: absolute;
   };
 

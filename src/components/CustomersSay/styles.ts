@@ -11,7 +11,6 @@ export const Container = styled.div<HTMLAttributes<HTMLDivElement>>`
   align-items: center;
   gap: 4.3rem;
   padding-top: 4rem;
-  /* background-color: rgba(251, 218, 187, .3); */
 
   ::before {
     content: '';
@@ -28,7 +27,6 @@ export const Container = styled.div<HTMLAttributes<HTMLDivElement>>`
     };
 
     @media (max-width: 606px) {
-      /* height: 100%; */
       height: 190rem;
       min-height: 190rem;
     };

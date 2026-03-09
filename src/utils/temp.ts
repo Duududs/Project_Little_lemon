@@ -37,7 +37,6 @@ export const updateTimes = (state: any, action: any) => {
 };
 
 export const initializeTimes = () => {
-  // create a Date object to represent today's date
   const today = new Date();
   return { times: fetchAPI(today) };
 };

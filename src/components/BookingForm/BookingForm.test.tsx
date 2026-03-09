@@ -1,7 +1,5 @@
-// import { screen } from "@testing-library/react";
 import { render, screen } from "../../utils/tests-ts";
 import BookingForm from ".";
-// import userEvent from "@testing-library/user-event";
 import { submitAPI, fetchAPI, initializeTimes, updateTimes  } from "../../utils/temp";
 
 describe("BookingForm", () => {
@@ -14,7 +12,6 @@ describe("BookingForm", () => {
         dispatch={jest.fn((action) => action)}
       />
     );
-    // Date label and field
     const choseDateLabel = screen.getByText("Choose date");
     expect(choseDateLabel).toBeInTheDocument();
     const choseDateField = screen.getByTestId("res-date");
@@ -38,27 +35,6 @@ describe("BookingForm", () => {
     const submitButton = screen.getByDisplayValue("Make Your reservation");
     expect(submitButton).toBeInTheDocument();
   });
-
-  // test("Validation fields", async () => {
-  //   render(
-  //     <BookingForm
-  //       availableTimes={{
-  //         times: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
-  //       }}
-  //       dispatch={jest.fn((action) => action)}
-  //     />
-  //   );
-  //   const user = userEvent.setup()
-  //   const numberGuestField = screen.getByTestId("guests");
-  //   const submitButton = screen.getByDisplayValue("Make Your reservation");
-
-  //   await user.type(numberGuestField, "0");
-
-  //   await user.click(submitButton);
-  //   const numberGuestFieldError = screen.getByTestId("guests-error");
-
-  //   expect(numberGuestFieldError).toHaveTextContent("Must be at least 1");
-  // });
 
   test("initializeTimes returns the correct expected value", () => {
     const today = new Date();
